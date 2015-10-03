@@ -10,6 +10,11 @@ var outer = function(){
 //Invoke outer saving the return value into another variable called 'inner'.
 
   //Code Here
+var inner = outer{}
+function () {
+  return The original name was' + name;
+}
+inner ()
 
 //Once you do that, invoke inner.
 
@@ -33,8 +38,22 @@ var callFriend = function(){
 //Do what you need to do in order to call your function and get 'Calling Jake at 435-215-9248' in your console.
 
   //Code Here
+var callFriend = function(){
+  var friend = 'Jake';
+  function callF(number){
+    return 'Calling ' + friend + ' at ' + number;
+  }
+  return callF;
+};
+var inner = callFriend()
+inner
+function callF(number) {
+    return 'Calling' + friend + 'at' + number;
+}
+  console.log(callF('435-215-1111'));
+};
 
-
+callFriend();
 
 //Next Problem
 
